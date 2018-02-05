@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>React for Beginners</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>React for Beginners</h1>
+					<h5>A beginners guide of React and its ecosystem</h5>
+					<small class="fragment fade-up" style="padding-right: 15px">
+						Github: Elliot-Evans-95
+					</small>
+					<small class="fragment fade-up" style="padding-left: 15px">
+						Twitter: @EIIiotEvans
+					</small>
+
+					<aside class="notes">
+						test 123
+					</aside>
+
+					<!--<iframe src="https://codesandbox.io/s/84n80qorn0" frameborder="0" title="create-react-app" width="1200" height="800"></iframe>-->
+				</section>
+				<section>
+					<h2>To cover:</h2>
+					<ul>
+						<li>Why React Exists</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+					</ul>
+				</section>
+				<section>
+					<pre><code class="hljs" data-trim contenteditable>
+						function linkify( selector ) {
+						  if( supports3DTransforms ) {
+
+							var nodes = document.querySelectorAll( selector );
+
+							for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+							  var node = nodes[i];
+
+							  if( !node.className ) {
+								node.className += ' roll';
+							  }
+							}
+						  }
+						}
+					</code></pre>
+				</section>
+				<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+					<h2>GIFs!</h2>
+				</section>
+				<section>Slide 4</section>
+				<section>Slide 5</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
