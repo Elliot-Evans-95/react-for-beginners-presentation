@@ -31,23 +31,25 @@
 						Github: <a href="https://github.com/Elliot-Evans-95">Elliot-Evans-95</a>
 					</small>
 					<small class="fragment fade-up" style="padding-left: 15px">
-						Twitter: <a href="">@EIIiotEvans</a>
+						Twitter: <a href="https://twitter.com/EIIiotEvans">@EIIiotEvans</a>
 					</small>
 
 					<aside class="notes">
 						test 123
 					</aside>
 				</section>
+
 				<section>
 					<h2>To cover:</h2>
 					<ul>
-						<li>Why React Exists</li>
-						<li>React Philosophy</li>
-						<li>Get Started</li>
-						<li>Extensions to React</li>
-						<li>Compare React and its rivals</li>
+						<li style="color: #36658a"><span style="color: #fff">Why React Exists</span></li>
+						<li style="color: #36658a"><span style="color: #fff">React Philosophy</span></li>
+						<li style="color: #36658a"><span style="color: #fff">Get Started</span></li>
+						<li style="color: #36658a"><span style="color: #fff">Extensions to React</span></li>
+						<li style="color: #36658a"><span style="color: #fff">Compare React and its rivals</span></li>
 					</ul>
 				</section>
+
 				<section>
 					<h2>Story</h2>
 					<aside class="notes">
@@ -62,6 +64,7 @@
 
 					</aside>
 				</section>
+
 				<section>
 					<h2>Why React Exists</h2>
 					<aside class="notes">
@@ -78,13 +81,24 @@
 						Components are make up of your view logic and your markup, by having both in one place it makes applications easier to maintain and extend.
 					</aside>
 				</section>
+
 				<section>
 					<h2>React Philosophy</h2>
 					<img src="images/react-virtual-dom-image.png" alt="react virtual dom" style="width: 80%">
 				</section>
+
 				<section>
 					<h2>Get Started</h2>
-					<iframe src="https://codesandbox.io/s/84n80qorn0" frameborder="0" title="create-react-app" width="1200" height="800"></iframe>
+					<pre class="fragment fade-up" style="box-shadow: none">
+						<code class="hljs" data-trim contenteditable>
+							$ npm install -g create-react-app
+						</code>
+					</pre>
+					<pre class="fragment fade-up" style="box-shadow: none">
+						<code class="hljs" data-trim contenteditable>
+							$ create-react-app demo-app
+						</code>
+					</pre>
 					<aside class="notes">
 						So I now know about react, basic concepts of how it works and big companies use it, how do I get started?
 
@@ -93,7 +107,13 @@
 						I frame in or Use online editor and create a react app online
 
 						What create react app is
+					</aside>
+				</section>
 
+				<section>
+					<h2>Create React App</h2>
+					<iframe src="https://codesandbox.io/s/84n80qorn0" frameborder="0" title="create-react-app" width="1200" height="800"></iframe>
+					<aside class="notes">
 						What it contains
 
 						Create a component
@@ -107,22 +127,26 @@
 						Pass prop into the component
 					</aside>
 				</section>
+
 				<section>
 					<h2>React Extensions</h2>
 					<div style="display: flex; flex-direction: row;">
 						<div class="fragment fade-up">
 							<h5>React Router</h5>
-							<img src="/images/react-router.png" alt="React Router" style="border: 0; background: none; width: 300px;">
+							<img src="/images/react-router.png" alt="React Router" style="border: 0; background: none; width: 300px; box-shadow: none;">
 						</div>
 						<div class="fragment fade-up">
 							<h5>Redux</h5>
-							<img src="/images/redux.png" alt="" style="border: 0; background: none; width: 300px;">
+							<img src="/images/redux.png" alt="" style="border: 0; background: none; width: 300px; box-shadow: none;">
 						</div>
 						<div class="fragment fade-up">
 							<h5>Styled Components</h5>
-							<img src="/images/styled-components.png" alt="React Router" style="border: 0; background: none; width: 300px;">
+							<img src="/images/styled-components.png" alt="React Router" style="border: 0; background: none; width: 300px; box-shadow: none;">
 						</div>
 					</div>
+					<small class="fragment fade-up">
+						<a href="https://github.com/enaqx/awesome-react">https://github.com/enaqx/awesome-react</a> - List of react Extensions
+					</small>
 					<aside class="notes">
 						React Router
 
@@ -133,6 +157,106 @@
 						https://github.com/enaqx/awesome-react - List of react Extensions
 					</aside>
 				</section>
+
+				<section>
+					<h3>React Router</h3>
+
+					<div style="font-size: 32px">
+						<pre style="margin: 10px auto;"><code class="hljs" data-trim contenteditable>
+							$ npm install react-router-dom
+						</code></pre>
+					</div>
+
+					<div style="display: flex; flex-direction: row; flex-wrap: wrap; font-size: 32px">
+						<div style="width: 100%; flex: 1 0 auto;">
+							<pre style="margin: 10px 0; width: 100%;"><code class="hljs" data-trim contenteditable>
+								const BasicExample = () => (
+								  <Router>
+									<div>
+									  <ul>
+										<li><Link to="/">Home</Link></li>
+										<li><Link to="/about">About</Link></li>
+									  </ul>
+
+									  <Route exact path="/" component={Home}/>
+									  <Route path="/about" component={About}/>
+									</div>
+								  </Router>
+							</code></pre>
+						</div>
+
+						<div style="width: 100%; flex: 1 0 auto;">
+							<pre style="margin: 10px 0; width: 100%;"><code class="hljs" data-trim contenteditable>
+								const Home = ({ match }) => (
+								  <div>
+									<h2>Home</h2>
+									<ul>
+									  <li>
+										<Link to={`${match.url}/about`}>About Page</Link>
+									  </li>
+									</ul>
+								  </div>
+								)
+							</code></pre>
+						</div>
+					</div>
+
+				</section>
+
+				<section>
+					<h3>Redux</h3>
+
+					<pre><code class="hljs" style="max-height: 100%" data-trim contenteditable>
+						// Action Types
+						const INCREMENT = "INCREMENT";
+
+						// Action Creators
+						function inc() {
+							return { type: INCREMENT }
+						}
+
+						// Reducers
+						function counter(state = 0, action) {
+							switch() {
+								case INCREMENT:
+									return state + 1
+								default:
+									return state
+							}
+						}
+
+						let counterStore = Redux.createStore(counter);
+						counterStore.dispatch(inc());
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Styled Components</h3>
+
+					<div>
+						<pre><code class="hljs" data-trim contenteditable>
+							$ npm install --save styled-components
+						</code></pre>
+					</div>
+
+					<pre><code class="hljs" data-trim contenteditable>
+						const Title = styled.h1`
+						  font-size: 1.5em;
+						  text-align: center;
+						  color: palevioletred;
+						`;
+
+						const Wrapper = styled.section`
+						  padding: 4em;
+						  background: papayawhip;
+						`;
+
+						<Wrapper>
+						  <Title>Hello World!</Title>
+						</Wrapper>
+					</code></pre>
+				</section>
+
 				<section>
 					<h2>React v Rivals</h2>
 					<table style="font-size: 24px; padding-top: 2em;">
@@ -209,29 +333,29 @@
 						Due to a startup time but its faster once the loading has been finished.
 					</aside>
 				</section>
-				<section>
-					<pre><code class="hljs" data-trim contenteditable>
-						function linkify( selector ) {
-						  if( supports3DTransforms ) {
+				<!--<section>-->
+					<!--<pre><code class="hljs" data-trim contenteditable>-->
+						<!--function linkify( selector ) {-->
+						  <!--if( supports3DTransforms ) {-->
 
-							var nodes = document.querySelectorAll( selector );
+							<!--var nodes = document.querySelectorAll( selector );-->
 
-							for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-							  var node = nodes[i];
+							<!--for( var i = 0, len = nodes.length; i &lt; len; i++ ) {-->
+							  <!--var node = nodes[i];-->
 
-							  if( !node.className ) {
-								node.className += ' roll';
-							  }
-							}
-						  }
-						}
-					</code></pre>
-				</section>
-				<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-					<h2>GIFs!</h2>
-				</section>
+							  <!--if( !node.className ) {-->
+								<!--node.className += ' roll';-->
+							  <!--}-->
+							<!--}-->
+						  <!--}-->
+						<!--}-->
+					<!--</code></pre>-->
+				<!--</section>-->
 				<section>
 					<h2>Thank you</h2>
+					<small>
+						Repo of my Presentation: <a href="https://github.com/Elliot-Evans-95/react-for-beginners-presentation">https://github.com/Elliot-Evans-95/react-for-beginners-presentation</a>
+					</small>
 				</section>
 			</div>
 		</div>
